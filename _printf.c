@@ -20,8 +20,7 @@ int _printf(const char *format, ...)
 		{
 			putchrr(format[i]);
 		}
-		else if	(format[i] == '%' && format[i + 1] == 'c')
-
+		else if	(format[i + 1] == 'c')
 		{
 			putchrr(va_arg(holder, int));
 			i++;
@@ -37,7 +36,6 @@ int _printf(const char *format, ...)
 			putchrr('%');
 		}
 		loop += 1;
-
 	}
 	va_end(holder);
 	return (loop);
