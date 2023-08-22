@@ -9,6 +9,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i, s_loop, loop = 0;
+	
 	va_list holder;
 
 	va_start(holder, format);
